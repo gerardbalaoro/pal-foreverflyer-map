@@ -5,9 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Forever Flyer - Influencer Map</title>
-
 	<link rel="stylesheet" href="style.css">
-
 	<style>
 		body {
 			display: block;
@@ -20,8 +18,18 @@
 	</style>
 </head>
 <body>
-	<div class="map-section">
-		{% render 'map', influencers: influencers %}
+	<!-- MAP SECTION, START COPY HERE -->
+	<div class="map-section" id="map-section">
+		<div class="container">
+			{% render 'map', influencers: influencers %}
+			<div class="messaging">
+				<h3>MEET OUR PALS</h3>
+				<p>Click on the location tags to find out more about our curated itineraries</p>
+				<p>Build your own dream itinerary and get a chance to <b>FLY FREE FOREVER</b>.</p>
+			</div>
+		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<!-- END OF MAP SECTION -->
 </body>
 </html>

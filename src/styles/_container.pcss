@@ -1,0 +1,77 @@
+$section {
+	font-family: 'Brandon', sans-serif;
+	line-height: normal;
+	color: $primary-color;
+	display: flex;
+	height: 1080px;
+	width: 100%;
+
+	> .container {
+		/* border: 1px solid red; */
+		position: relative;
+		margin: auto;
+		max-width: 100%;
+		width: 1400px;
+
+		@mixin screen-xl {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+$section > .container > .messaging {
+	margin-left: 20px;
+	margin-top: 40px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+	@mixin screen-xl {
+		position: static;
+		margin-bottom: 20px;
+		padding: 0 20px;
+		text-align: center;
+		order: 1;
+	}
+
+	> h3 {
+		margin: 0px;
+		margin-bottom: 40px;
+		letter-spacing: 5px;
+		font-size: 70px;
+		font-weight: 600;
+
+		@mixin screen-lg {
+			font-size: 50px;
+			letter-spacing: normal;
+			margin-bottom: 20px;
+
+		}
+
+		@mixin screen-md {
+			font-size: 30px;
+		}
+	}
+
+	> p {
+		margin-bottom: 0px;
+		margin-top: 20px;
+		font-size: 26px;
+		width: 300px;
+
+		@mixin screen-xl {
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 0px;
+			width: auto;
+		}
+
+		@mixin screen-lg {
+			font-size: 20px;
+		}
+
+		@mixin screen-md {
+			font-size: 16px;
+		}
+	}
+}

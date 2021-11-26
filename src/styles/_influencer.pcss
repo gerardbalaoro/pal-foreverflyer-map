@@ -1,0 +1,154 @@
+$section > .container > .map > .influencers {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+
+	@mixin screen-md {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+}
+
+@keyframes reveal-to-right {
+	0% {
+		clip-path: ellipse(0% 100% at 00% 50%);
+	}
+	100% {
+		clip-path: ellipse(200% 100% at 00% 50%);
+	}
+}
+
+@keyframes reveal-to-left {
+	0% {
+		clip-path: ellipse(0% 100% at 100% 50%);
+	}
+	100% {
+		clip-path: ellipse(200% 100% at 100% 50%);
+	}
+}
+
+$section > .container > .map > .influencers > .influencer {
+	position: absolute;
+
+	@mixin screen-md {
+		position: static;
+		margin: 10px;
+	}
+
+	> .bubble {
+		display: flex;
+		flex-direction: column;
+		font-size: 8px;
+		line-height: 1.5;
+		background-color: #ffffff;
+		border-radius: 4px;
+		padding: 8px 10px;
+		position: relative;
+		@mixin shadow-md;
+
+		@mixin screen-md {
+			min-width: 150px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.bubble-content {
+			display: flex;
+			font-weight: 600;
+
+			.photo {
+				background-size: cover;
+				background-position: center;
+				border-radius: 100%;
+				margin-right: 10px;
+				margin-left: auto;
+				height: 40px;
+				width: 40px;
+			}
+
+			.details {
+				margin-right: auto;
+			}
+
+			.location {
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			.name {
+				font-size: 8px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			a {
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+
+		.bubble-footer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 8px;
+			width: 100%;
+
+			.itinerary {
+				text-decoration: none;
+				background-color: $primary-color;
+				border-radius: 5px;
+				padding: 3px 5px;
+				color: #ffffff;
+				margin: auto;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.arrow,
+	.polaroid {
+		position: absolute;
+
+		@mixin screen-lg {
+			display: none;
+		}
+	}
+
+	.arrow {
+		&.to-right svg {
+			animation: reveal-to-right 2s ease-out forwards;
+
+		}
+
+		&.to-left svg {
+			animation: reveal-to-left 2s ease-out forwards;
+		}
+	}
+
+	.polaroid {
+		opacity: 0;
+		transform-origin: center center;
+		animation: fade-pop-in 0.3s ease-out 1s forwards;
+	}
+}
+
+@keyframes fade-pop-in {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

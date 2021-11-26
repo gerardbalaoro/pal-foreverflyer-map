@@ -1,0 +1,44 @@
+$section > .container > .map {
+	/* border: 1px solid blue; */
+	color: $primary-color;
+	position: relative;
+	margin-right: 20px;
+	margin-left: 350px;
+	margin-bottom: auto;
+	margin-top: 10px;
+	height: auto;
+	width: auto;
+
+	@mixin screen-xl {
+		margin-left: 20px;
+		order: 2;
+	}
+
+	> .background {
+		width: 100%;
+	}
+}
+
+$section > .container > .map > .pins {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+
+	@mixin screen-md {
+		display: none;
+	}
+
+	> .pin {
+		position: absolute;
+
+		> svg {
+			position: absolute;
+			bottom: -100%;
+			left: -7px;
+			height: auto;
+			width: 14px;
+		}
+	} 
+}

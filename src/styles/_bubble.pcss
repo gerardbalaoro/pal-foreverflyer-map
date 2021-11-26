@@ -1,0 +1,71 @@
+$pointer-size: 1.5em;
+
+$section {
+	.bubble {
+		position: relative;
+		z-index: 2;
+	
+		&.center {
+			&:before {
+				right: 50%;
+				transform: translateX(50%);
+			}
+		}
+		&.near {
+			&::before {
+				left: 1.5em;
+			}
+		}
+		&.far {
+			&::before {
+				right: 1.5em;
+			}
+		}
+		&.up {
+			&::before {
+				bottom: auto;
+				top: -1.5em;
+				border-width: 0 1.5em 1.5em;
+			}
+		}
+		&.left {
+			&::before {
+				left: -1.5em;
+				border-width: 1.5em 1.5em 1.5em 0;
+				border-color: transparent #fff;
+			}
+		}
+		&.right {
+			&::before {
+				right: -1.5em;
+				border-width: 1.5em 0 1.5em 1.5em;
+			}
+		}
+	}
+	.bubble:before,
+	.bubble.down:before {
+		content: '';
+		position: absolute;
+		bottom: -1.5em;
+		border-style: solid;
+		border-width: 1.5em 1.5em 0;
+		border-color: #fff transparent;
+		z-index: -1;
+	}
+	.bubble.left::before,
+	.bubble.right::before,
+	.bubble.left.high::before,
+	.bubble.right.high::before {
+		bottom: auto;
+		border-color: transparent #fff;
+	}
+	.bubble.left.middle::before,
+	.bubble.right.middle::before {
+		bottom: 50%;
+		transform: translateY(50%);
+	}
+	.bubble.left.low::before,
+	.bubble.right.low::before {
+		bottom: 1.5em;
+	}
+}

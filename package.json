@@ -2,24 +2,25 @@
   "scripts": {
     "build": "node scripts/build.js",
     "serve": "node scripts/serve.js",
-    "watch": "nodemon --ext * --watch src --watch assets --watch scripts --exec npm run build",
-    "start": "npm run build && npm run serve",
-    "dev": "npm run watch & npm run serve"
+    "watch": "nodemon --ext * --watch src --watch build/assets --watch scripts --exec npm run build",
+    "dev": "concurrently 'npm:watch' 'npm:serve'"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "chalk": "^4.1.2",
     "fast-glob": "^3.2.7",
-    "globby": "^12.0.2",
+    "js-yaml": "^4.1.0",
     "liquidjs": "^9.28.5",
-    "nunjucks": "^3.2.3",
     "postcss": "^8.4.1",
+    "postcss-each": "^1.1.0",
+    "postcss-easy-import": "^3.0.0",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",
     "postcss-simple-vars": "^6.0.3",
     "prettier": "^2.5.0"
   },
   "devDependencies": {
+    "concurrently": "^6.4.0",
     "live-server": "^1.1.0",
     "nodemon": "^2.0.15"
   }

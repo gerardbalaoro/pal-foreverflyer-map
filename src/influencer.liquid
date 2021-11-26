@@ -1,3 +1,34 @@
-<div id="influencer">
-	<name>{{ name }}</name>
+<div class="influencer" data-influencer="{{ influencer.instagram }}" style="left: {{ influencer.bubble.x }}%; top: {{ influencer.bubble.y }}%;">
+	{% if influencer.arrow %}
+		<div class="arrow {{ influencer.arrow.direction | default: 'right' | prepend: 'to-' }}" style="left: {{ influencer.arrow.x }}%; top: {{ influencer.arrow.y }}%;">
+			{{ influencer.arrow.content }}
+		</div>
+	{% endif %}
+	{% if influencer.polaroid %}
+		<div class="polaroid" style="left: {{ influencer.polaroid.x }}%; top: {{ influencer.polaroid.y }}%;">
+			<img src="{{ influencer.polaroid.image }}" style="transform: rotate({{ influencer.polaroid.rotation }}deg);" height="100px" alt="{{ influencer.name }}'s image">
+		</div>
+	{% endif %}
+	<div class="bubble {{ influencer.bubble.origin }}">
+		<div class="bubble-content">
+			<div class="photo" style="background-image: url({{ influencer.photo }});"></div>
+			<div class="details">
+				<div class="location">{{ influencer.location }}</div>
+				<div class="name">{{ influencer.name }}</div>
+				<div class="instagram">
+					<a href="https://instagr.am/{{ influencer.instagram }}" target="_blank" rel="noopener noreferrer">
+						@{{ influencer.instagram }}
+					</a>
+				</div>
+				<div class="followers">
+					{{ influencer.followers }} Followers
+				</div>
+			</div>
+		</div>
+		<div class="bubble-footer">
+			<a href="{{ influencer.itinerary }}" class="itinerary" style="background-color: {{ influencer.color }};">
+				CLICK HERE FOR MY ITINERARY!
+			</a>
+		</div>
+	</div>
 </div>
