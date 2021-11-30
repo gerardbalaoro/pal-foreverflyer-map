@@ -10,6 +10,8 @@ bubble:
   origin: left middle
   x: 20
   y: 45
+  mx: 20
+  my: 30
 
 pin:
   x: 13.5

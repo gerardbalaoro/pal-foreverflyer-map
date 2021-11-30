@@ -6,10 +6,13 @@ followers: 68.9K
 itinerary: https://foreverflyer.philippineairlines.com/itinerary/mari.explores/
 color: '#D9A51E'
 
+
 bubble:
   origin: down center
   x: 7
   y: 27
+  mx: 5
+  my: 0
 
 pin: 
   x: 14
