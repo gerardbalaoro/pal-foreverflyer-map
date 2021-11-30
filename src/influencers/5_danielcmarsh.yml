@@ -10,6 +10,8 @@ bubble:
   origin: 'up near'
   x: 79
   y: 67
+  mx: 60
+  my: 67
 
 pin:
   x: 80.5
