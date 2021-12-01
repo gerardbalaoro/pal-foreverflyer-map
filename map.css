@@ -1,50 +1,75 @@
+/* Map CSS */
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: bold;
+  src: url('assets/fonts/BrandonGrotesque-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 900;
+  src: url('assets/fonts/BrandonGrotesque-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 600;
+  src: url('assets/fonts/BrandonGrotesque-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 100;
+  src: url('assets/fonts/BrandonGrotesque-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 200;
+  src: url('assets/fonts/BrandonGrotesque-Light.ttf') format('truetype');
+}
 #map-section {
-  font-family: 'Brandon', sans-serif;
+  font-family: 'Brandon', sans-serif !important;
   line-height: normal;
   color: #0f346a;
   display: flex;
   height: 100%;
   width: 100%;
 }
-
 #map-section > .container {
   position: relative;
   margin: auto;
-  max-width: 100%;
-  width: 1400px;
 }
-
 @media (max-width: 1281px) {
   #map-section > .container {
     display: flex;
     flex-direction: column;
   }
 }
-
 #map-section a {
   text-decoration: none;
   display: block;
   color: inherit;
 }
-
 #map-section > .container > .messaging {
-  margin-left: 20px;
+  margin-left: 40px;
   margin-top: 40px;
   position: absolute;
   left: 0px;
   top: 0px;
 }
-
 @media (max-width: 1281px) {
   #map-section > .container > .messaging {
     position: static;
     margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
     padding: 0 20px;
     text-align: center;
     order: 1;
   }
 }
-
 #map-section > .container > .messaging > h3 {
   margin: 0px;
   color: #0f346a;
@@ -52,8 +77,8 @@
   letter-spacing: 5px;
   font-size: 70px;
   font-weight: 600;
+  font-family: 'Brandon', sans-serif !important;
 }
-
 @media (max-width: 1025px) {
   #map-section > .container > .messaging > h3 {
     font-size: 50px;
@@ -61,21 +86,19 @@
     margin-bottom: 20px;
   }
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .messaging > h3 {
     font-size: 30px;
   }
 }
-
 #map-section > .container > .messaging > p {
   color: #0f346a;
   margin-bottom: 0px;
   margin-top: 20px;
   font-size: 26px;
+  font-family: 'Brandon', sans-serif !important;
   width: 300px;
 }
-
 @media (max-width: 1281px) {
   #map-section > .container > .messaging > p {
     margin-right: auto;
@@ -84,41 +107,36 @@
     width: auto;
   }
 }
-
 @media (max-width: 1025px) {
   #map-section > .container > .messaging > p {
     font-size: 20px;
   }
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .messaging > p {
     font-size: 16px;
   }
 }
-
 #map-section > .container > .map {
   color: #0f346a;
   position: relative;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-left: 350px;
   margin-bottom: auto;
   margin-top: 10px;
   height: auto;
   width: auto;
 }
-
 @media (max-width: 1281px) {
   #map-section > .container > .map {
+    margin-right: 20px;
     margin-left: 20px;
     order: 2;
   }
 }
-
 #map-section > .container > .map > .background {
   width: 100%;
 }
-
 #map-section > .container > .map > .pins {
   position: absolute;
   height: 100%;
@@ -126,17 +144,14 @@
   left: 0px;
   top: 0px;
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .pins {
     display: none;
   }
 }
-
 #map-section > .container > .map > .pins > .pin {
   position: absolute;
 }
-
 #map-section > .container > .map > .pins > .pin > svg {
   position: absolute;
   bottom: -100%;
@@ -144,42 +159,34 @@
   height: auto;
   width: 14px;
 }
-
 #map-section .bubble {
   position: relative;
   z-index: 2;
 }
-
 #map-section .bubble.center:before {
   right: 50%;
   transform: translateX(50%);
 }
-
 #map-section .bubble.near::before {
   left: 1.5em;
 }
-
 #map-section .bubble.far::before {
   right: 1.5em;
 }
-
 #map-section .bubble.up::before {
   bottom: auto;
   top: -1.5em;
   border-width: 0 1.5em 1.5em;
 }
-
 #map-section .bubble.left::before {
   left: -1.5em;
   border-width: 1.5em 1.5em 1.5em 0;
   border-color: transparent #fff;
 }
-
 #map-section .bubble.right::before {
   right: -1.5em;
   border-width: 1.5em 0 1.5em 1.5em;
 }
-
 #map-section .bubble:before,
 #map-section .bubble.down:before {
   content: '';
@@ -190,7 +197,6 @@
   border-color: #fff transparent;
   z-index: -1;
 }
-
 #map-section .bubble.left::before,
 #map-section .bubble.right::before,
 #map-section .bubble.left.high::before,
@@ -198,26 +204,23 @@
   bottom: auto;
   border-color: transparent #fff;
 }
-
 #map-section .bubble.left.middle::before,
 #map-section .bubble.right.middle::before {
   bottom: 50%;
   transform: translateY(50%);
 }
-
 #map-section .bubble.left.low::before,
 #map-section .bubble.right.low::before {
   bottom: 1.5em;
 }
-
 #map-section > .container > .map > .influencers {
+  font-family: 'Brandon', sans-serif !important;
   position: absolute;
   height: 100%;
   width: 100%;
   left: 0px;
   top: 0px;
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .influencers {
     display: flex;
@@ -227,20 +230,17 @@
     width: 100%;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer {
   position: absolute;
   left: var(--x);
   top: var(--y);
 }
-
 @media (max-width: 641px) {
   #map-section > .container > .map > .influencers > .influencer {
     left: var(--mx);
     top: var(--my);
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble {
   display: flex;
   flex-direction: column;
@@ -252,7 +252,6 @@
   position: relative;
   filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .influencers > .influencer > .bubble {
     min-width: 150px;
@@ -265,12 +264,10 @@
     display: none;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content {
   display: flex;
   font-weight: 600;
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .photo {
   box-sizing: border-box;
   position: relative;
@@ -281,14 +278,12 @@
   height: 40px;
   width: 40px;
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .photo > img {
   position: absolute;
   border-radius: 100%;
   height: 100%;
   width: 100%;
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .photo::before {
     content: ' ';
@@ -302,21 +297,20 @@
     width: 100%;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .details {
+  font-family: 'Brandon', sans-serif !important;
+
   display: flex;
   flex-direction: column;
   align-items: start;
   margin-right: auto;
   line-height: 1.3;
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .location {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .location {
     color: #ffffff;
@@ -326,19 +320,16 @@
     padding: 2px 3px;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content .name {
   font-size: 8px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-content a {
   text-decoration: none;
   color: inherit;
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-footer {
   display: flex;
   justify-content: center;
@@ -346,13 +337,11 @@
   margin-top: 8px;
   width: 100%;
 }
-
 @media (max-width: 767px) {
   #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-footer {
     display: none;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-footer .itinerary {
   text-decoration: none;
   background-color: var(--color, #0f346a);
@@ -362,29 +351,27 @@
   margin: auto;
   white-space: nowrap;
 }
-
 #map-section > .container > .map > .influencers > .influencer .arrow,
 #map-section > .container > .map > .influencers > .influencer .polaroid {
   position: absolute;
 }
-
-#map-section > .container > .map > .influencers > .influencer .arrow > img,
-#map-section > .container > .map > .influencers > .influencer .polaroid > img {
-  height: 100px;
-  width: auto;
+#map-section > .container > .map > .influencers > .influencer .arrow > .image,
+#map-section > .container > .map > .influencers > .influencer .polaroid > .image {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100px !important;
+  width: 100px !important;
 }
-
 @media (max-width: 1025px) {
   #map-section > .container > .map > .influencers > .influencer .arrow,
   #map-section > .container > .map > .influencers > .influencer .polaroid {
     display: none;
   }
 }
-
 #map-section > .container > .map > .influencers > .influencer .polaroid {
   transform-origin: center center;
 }
-
 @-webkit-keyframes pulse {
   0% {
     opacity: 1;
@@ -394,7 +381,6 @@
     opacity: 0;
   }
 }
-
 @keyframes pulse {
   0% {
     opacity: 1;
@@ -404,3 +390,4 @@
     opacity: 0;
   }
 }
+/* End Map CSS */
