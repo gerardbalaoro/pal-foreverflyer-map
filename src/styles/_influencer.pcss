@@ -1,4 +1,5 @@
 #$(section_id) > .container > .map > .influencers {
+	@mixin font-primary;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -82,6 +83,8 @@
 			}
 
 			.details {
+				@mixin font-primary;
+
 				display: flex;
 				flex-direction: column;
 				align-items: start;
@@ -143,9 +146,12 @@
 	.polaroid {
 		position: absolute;
 
-		> img {
-			height: 100px;
-			width: auto;
+		> .image {
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
+			height: 100px !important;
+			width: 100px !important;
 		}
 
 		@mixin screen-lg {

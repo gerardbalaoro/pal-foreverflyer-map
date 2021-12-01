@@ -17,7 +17,7 @@
 				var mainTL = new gsap.timeline();
 
 				mainTL
-					.set($('.bubble, .polaroid'), { opacity: 0, scale: 0 }, 0)
+					.set($('.bubble, .polaroid'), { opacity: 0, scale: 0, z: 0.1 }, 0)
 					.set($('.arrow.to-right svg'), { clipPath: 'ellipse(0% 100% at 00% 50%)' }, 0)
 					.set($('.arrow.to-left svg'), { clipPath: 'ellipse(0% 100% at 100% 50%)' }, 0);
 				

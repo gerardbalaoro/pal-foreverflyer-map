@@ -16,11 +16,13 @@
 	{% endif %}
 	{% if influencer.polaroid %}
 		<a href="{{ influencer.itinerary }}" class="polaroid" style="left: {{ influencer.polaroid.x }}%; top: {{ influencer.polaroid.y }}%;">
-			<img 
-				src="{{ influencer.polaroid.image | default: influencer.polaroid.image }}" 
-				alt="{{ influencer.name }}'s image"
-				style="transform: rotate({{ influencer.polaroid.rotation }}deg);"
-			/>
+			<div 
+				class="image" 
+				style="
+					transform: rotate({{ influencer.polaroid.rotation | default: 0.1 }}deg);
+					background-image: url({{ influencer.polaroid.image }});
+				">
+			</div>
 		</a>
 	{% endif %}
 	<a href="{{ influencer.itinerary }}" class="bubble {{ influencer.bubble.origin }}">

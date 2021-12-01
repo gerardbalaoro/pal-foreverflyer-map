@@ -1,5 +1,5 @@
 #$(section_id) {
-	font-family: 'Brandon', sans-serif;
+	@mixin font-primary;
 	line-height: normal;
 	color: $primary_color;
 	display: flex;
@@ -9,8 +9,6 @@
 	> .container {
 		position: relative;
 		margin: auto;
-		max-width: 100%;
-		width: 1400px;
 
 		@mixin screen-xl {
 			display: flex;
@@ -25,7 +23,7 @@
 	}
 }
 #$(section_id) > .container > .messaging {
-	margin-left: 20px;
+	margin-left: 40px;
 	margin-top: 40px;
 	position: absolute;
 	left: 0px;
@@ -34,6 +32,8 @@
 	@mixin screen-xl {
 		position: static;
 		margin-bottom: 20px;
+		margin-right: 0px;
+		margin-left: 0px;
 		padding: 0 20px;
 		text-align: center;
 		order: 1;
@@ -46,6 +46,7 @@
 		letter-spacing: 5px;
 		font-size: 70px;
 		font-weight: 600;
+		@mixin font-primary;
 
 		@mixin screen-lg {
 			font-size: 50px;
@@ -63,6 +64,7 @@
 		margin-bottom: 0px;
 		margin-top: 20px;
 		font-size: 26px;
+		@mixin font-primary;
 		width: 300px;
 
 		@mixin screen-xl {

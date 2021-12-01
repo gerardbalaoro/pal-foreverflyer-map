@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forever Flyer - Influencer Map</title>
-    <link rel="stylesheet" href="fonts.css" />
     <link rel="stylesheet" href="map.css" />
     <style>
       body {
@@ -44,11 +43,10 @@
                 class="polaroid"
                 style="left: 216%; top: 2%"
               >
-                <img
-                  src="assets/images/polaroid-mari.explores.png"
-                  alt="mari.explores's image"
-                  style="transform: rotate(deg)"
-                />
+                <div
+                  class="image"
+                  style="transform: rotate(0.1deg); background-image: url(assets/images/polaroid-mari.explores.png)"
+                ></div>
               </a>
 
               <a href="https://foreverflyer.philippineairlines.com/itinerary/mari.explores/" class="bubble down center">
@@ -87,11 +85,13 @@
                 class="polaroid"
                 style="left: 190%; top: 10%"
               >
-                <img
-                  src="assets/images/polaroid-haleytakesontheworld.png"
-                  alt="Haley Dasovich's image"
-                  style="transform: rotate(deg)"
-                />
+                <div
+                  class="image"
+                  style="
+                    transform: rotate(0.1deg);
+                    background-image: url(assets/images/polaroid-haleytakesontheworld.png);
+                  "
+                ></div>
               </a>
 
               <a
@@ -133,11 +133,10 @@
                 class="polaroid"
                 style="left: 230%; top: 60%"
               >
-                <img
-                  src="assets/images/polaroid-carson.moody.png"
-                  alt="Carson Moody's image"
-                  style="transform: rotate(deg)"
-                />
+                <div
+                  class="image"
+                  style="transform: rotate(0.1deg); background-image: url(assets/images/polaroid-carson.moody.png)"
+                ></div>
               </a>
 
               <a href="https://foreverflyer.philippineairlines.com/itinerary/carson.moody/" class="bubble up far">
@@ -183,11 +182,10 @@
                 class="polaroid"
                 style="left: -100%; top: -180%"
               >
-                <img
-                  src="assets/images/polaroid-thepoortraveler.png"
-                  alt="Vins & Yosh's image"
-                  style="transform: rotate(-15deg)"
-                />
+                <div
+                  class="image"
+                  style="transform: rotate(-15deg); background-image: url(assets/images/polaroid-thepoortraveler.png)"
+                ></div>
               </a>
 
               <a href="https://foreverflyer.philippineairlines.com/itinerary/thepoortraveler/" class="bubble down near">
@@ -234,18 +232,17 @@
               </div>
 
               <a
-                href="https://foreverflyer.philippineairlines.com/itinerary/danielcmarsh/"
+                href="https://foreverflyer.philippineairlines.com/itinerary/daniel-marsh/"
                 class="polaroid"
                 style="left: -180%; top: 5%"
               >
-                <img
-                  src="assets/images/polaroid-danielcmarsh.png"
-                  alt="Daniel Marsh's image"
-                  style="transform: rotate(5deg)"
-                />
+                <div
+                  class="image"
+                  style="transform: rotate(5deg); background-image: url(assets/images/polaroid-danielcmarsh.png)"
+                ></div>
               </a>
 
-              <a href="https://foreverflyer.philippineairlines.com/itinerary/danielcmarsh/" class="bubble up near">
+              <a href="https://foreverflyer.philippineairlines.com/itinerary/daniel-marsh/" class="bubble up near">
                 <div class="bubble-content">
                   <div class="photo">
                     <img src="assets/images/dp-danielcmarsh.jpg" alt="Daniel Marsh's profile photo" />
@@ -318,7 +315,7 @@
               </svg> </a
             ><a
               class="pin"
-              href="https://foreverflyer.philippineairlines.com/itinerary/danielcmarsh/"
+              href="https://foreverflyer.philippineairlines.com/itinerary/daniel-marsh/"
               data-influencer="danielcmarsh"
               style="color: #da1e1e; left: 80.5%; top: 64.5%"
             >
@@ -355,7 +352,7 @@
             var mainTL = new gsap.timeline();
 
             mainTL
-              .set($('.bubble, .polaroid'), { opacity: 0, scale: 0 }, 0)
+              .set($('.bubble, .polaroid'), { opacity: 0, scale: 0, z: 0.1 }, 0)
               .set($('.arrow.to-right svg'), { clipPath: 'ellipse(0% 100% at 00% 50%)' }, 0)
               .set($('.arrow.to-left svg'), { clipPath: 'ellipse(0% 100% at 100% 50%)' }, 0);
 

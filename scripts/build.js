@@ -3,7 +3,6 @@ const compiler = require('./lib/compiler');
 
 compiler(
 	[
-		{ in: 'src/styles/fonts.pcss', out: 'build/fonts.css' },
 		{ in: 'src/styles/index.pcss', out: 'build/map.css' },
 		{ in: 'src/index.liquid', out: 'build/index.html' }
 	],
