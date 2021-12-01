@@ -1,0 +1,27 @@
+﻿# Override values on production
+
+config:
+  font_prefix: https://pal.wideoutplusdev.com/wp-content/uploads/2021/08
+  map_image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/map.png
+
+influencers:
+  mari.explores:
+    photo: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-mari.explores.jpg
+    polaroid:
+      image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-mari.explores.png
+  haleytakesontheworld:
+    photo: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-haleytakesontheworld.jpg
+    polaroid:
+      image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-haleytakesontheworld.png
+  carson.moody:
+    photo: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-carson.moody_.jpg
+    polaroid:
+      image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-carson.moody_.png
+  thepoortraveler:
+    photo: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-thepoortraveler.jpg
+    polaroid:
+      image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-thepoortraveler.png
+  danielcmarsh:
+    photo: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-danielcmarsh.jpg
+    polaroid:
+      image: https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-danielcmarsh.png

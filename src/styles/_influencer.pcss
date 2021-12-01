@@ -1,4 +1,4 @@
-$section > .container > .map > .influencers {
+#$(section_id) > .container > .map > .influencers {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -14,7 +14,7 @@ $section > .container > .map > .influencers {
 	}
 }
 
-$section > .container > .map > .influencers > .influencer {
+#$(section_id) > .container > .map > .influencers > .influencer {
 	position: absolute;
 	left: var(--x);
 	top: var(--y);
@@ -96,7 +96,7 @@ $section > .container > .map > .influencers > .influencer {
 
 				@mixin screen-md {
 					color: #ffffff;
-					background-color: var(--color, $primary-color);
+					background-color: var(--color, $primary_color);
 					margin-bottom: 2px;
 					border-radius: 1px;
 					padding: 2px 3px;
@@ -129,7 +129,7 @@ $section > .container > .map > .influencers > .influencer {
 
 			.itinerary {
 				text-decoration: none;
-				background-color: var(--color, $primary-color);
+				background-color: var(--color, $primary_color);
 				border-radius: 5px;
 				padding: 3px 5px;
 				color: #ffffff;
@@ -143,54 +143,18 @@ $section > .container > .map > .influencers > .influencer {
 	.polaroid {
 		position: absolute;
 
+		> img {
+			height: 100px;
+			width: auto;
+		}
+
 		@mixin screen-lg {
 			display: none;
 		}
 	}
 
-	.arrow {
-		&.to-right svg {
-			animation: reveal-to-right 2s ease-out forwards;
-		}
-
-		&.to-left svg {
-			animation: reveal-to-left 2s ease-out forwards;
-		}
-	}
-
 	.polaroid {
-		opacity: 0;
 		transform-origin: center center;
-		animation: fade-pop-in 0.3s ease-out 1s forwards;
-	}
-}
-
-@keyframes fade-pop-in {
-	0% {
-		opacity: 0;
-		transform: scale(0);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
-}
-
-@keyframes reveal-to-right {
-	0% {
-		clip-path: ellipse(0% 100% at 00% 50%);
-	}
-	100% {
-		clip-path: ellipse(200% 100% at 00% 50%);
-	}
-}
-
-@keyframes reveal-to-left {
-	0% {
-		clip-path: ellipse(0% 100% at 100% 50%);
-	}
-	100% {
-		clip-path: ellipse(200% 100% at 100% 50%);
 	}
 }
 

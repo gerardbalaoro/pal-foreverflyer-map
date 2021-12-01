@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: bold;
+  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Black.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 100;
+  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Brandon';
+  font-style: normal;
+  font-weight: 200;
+  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Light.ttf') format('truetype');
+}

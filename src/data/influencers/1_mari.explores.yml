@@ -1,11 +1,10 @@
 name: mari.explores
-photo: assets/avatar/mari.explores.jpg
+photo: assets/images/dp-mari.explores.jpg
 instagram: mari.explores
 location: Vancouver, Canada
 followers: 68.9K
 itinerary: https://foreverflyer.philippineairlines.com/itinerary/mari.explores/
 color: '#D9A51E'
-
 
 bubble:
   origin: down center
@@ -19,7 +18,7 @@ pin:
   y: 46
 
 polaroid:
-  image: assets/polariod/mari.explores.png
+  image: assets/images/polaroid-mari.explores.png
   x: 216
   y: 2
 

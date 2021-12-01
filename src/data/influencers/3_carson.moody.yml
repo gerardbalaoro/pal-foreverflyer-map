@@ -1,5 +1,5 @@
 name: Carson Moody
-photo: assets/avatar/carson.moody.jpg
+photo: assets/images/dp-carson.moody.jpg
 instagram: carson.moody
 location: Los Angeles, CA
 followers: 208K
@@ -16,7 +16,7 @@ pin:
   y: 55
 
 polaroid:
-    image: assets/polariod/carson.moody.png
+    image: assets/images/polaroid-carson.moody.png
     x: 230
     y: 60
 

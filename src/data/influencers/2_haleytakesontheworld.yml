@@ -1,5 +1,5 @@
 name: Haley Dasovich
-photo: assets/avatar/haleytakesontheworld.jpg
+photo: assets/images/dp-haleytakesontheworld.jpg
 instagram: haleytakesontheworld
 location: San Francisco, CA
 followers: 244K
@@ -18,7 +18,7 @@ pin:
   y: 52
 
 polaroid:
-  image: assets/polariod/haleytakesontheworld.png
+  image: assets/images/polaroid-haleytakesontheworld.png
   x: 190
   y: 10
 

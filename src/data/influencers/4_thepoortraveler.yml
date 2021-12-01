@@ -1,5 +1,5 @@
 name: Vins & Yosh
-photo: assets/avatar/thepoortraveler.jpg
+photo: assets/images/dp-thepoortraveler.jpg
 instagram: thepoortraveler
 location: Metro Manila, PH
 followers: 74.1K
@@ -18,7 +18,7 @@ pin:
   y: 62.5
 
 polaroid:
-  image: assets/polariod/thepoortraveler.png
+  image: assets/images/polaroid-thepoortraveler.png
   rotation: -15
   x: -100
   y: -180

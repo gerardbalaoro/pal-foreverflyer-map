@@ -1,0 +1,11 @@
+﻿# Element ID for the map section
+section_id: 'map-section'
+
+# Primary color
+primary_color: '#0f346a'
+
+# Font URL prefix
+font_prefix: assets/fonts
+
+# Map Background Image
+map_image: assets/images/map.png

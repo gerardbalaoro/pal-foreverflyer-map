@@ -2,17 +2,19 @@
   "scripts": {
     "build": "node scripts/build.js",
     "serve": "node scripts/serve.js",
-    "watch": "nodemon --ext * --watch src --watch build/assets --watch scripts --exec npm run build",
+    "publish": "node scripts/publish.js",
+    "watch": "nodemon --ext * --watch src --watch build/assets --watch scripts --exec concurrently 'npm:build' 'npm:publish'",
     "dev": "concurrently 'npm:watch' 'npm:serve'"
   },
   "dependencies": {
+    "assign-deep": "^1.0.1",
     "autoprefixer": "^10.4.0",
     "chalk": "^4.1.2",
     "fast-glob": "^3.2.7",
     "js-yaml": "^4.1.0",
     "liquidjs": "^9.28.5",
+    "merge-deep": "^3.0.3",
     "postcss": "^8.4.1",
-    "postcss-each": "^1.1.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-mixins": "^8.1.0",
     "postcss-nested": "^5.0.6",

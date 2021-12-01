@@ -1,5 +1,5 @@
 name: Daniel Marsh
-photo: assets/avatar/danielcmarsh.jpg
+photo: assets/images/dp-danielcmarsh.jpg
 instagram: danielcmarsh
 location: Cebu, PH
 itinerary: https://foreverflyer.philippineairlines.com/itinerary/danielcmarsh/
@@ -18,7 +18,7 @@ pin:
   y: 64.5
 
 polaroid:
-  image: assets/polariod/danielcmarsh.png
+  image: assets/images/polaroid-danielcmarsh.png
   rotation: 5
   x: -180
   y: 5
