@@ -3,31 +3,36 @@
   font-family: 'Brandon';
   font-style: normal;
   font-weight: bold;
-  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Bold.ttf') format('truetype');
+  src: url('https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/08/BrandonGrotesque-Bold.ttf')
+    format('truetype');
 }
 @font-face {
   font-family: 'Brandon';
   font-style: normal;
   font-weight: 900;
-  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Black.ttf') format('truetype');
+  src: url('https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/08/BrandonGrotesque-Black.ttf')
+    format('truetype');
 }
 @font-face {
   font-family: 'Brandon';
   font-style: normal;
   font-weight: 600;
-  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Medium.ttf') format('truetype');
+  src: url('https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/08/BrandonGrotesque-Medium.ttf')
+    format('truetype');
 }
 @font-face {
   font-family: 'Brandon';
   font-style: normal;
   font-weight: 100;
-  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Thin.ttf') format('truetype');
+  src: url('https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/08/BrandonGrotesque-Thin.ttf')
+    format('truetype');
 }
 @font-face {
   font-family: 'Brandon';
   font-style: normal;
   font-weight: 200;
-  src: url('https://pal.wideoutplusdev.com/wp-content/uploads/2021/08/BrandonGrotesque-Light.ttf') format('truetype');
+  src: url('https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/08/BrandonGrotesque-Light.ttf')
+    format('truetype');
 }
 #map-section {
   font-family: 'Brandon', sans-serif !important;
@@ -151,6 +156,7 @@
 }
 #map-section > .container > .map > .pins > .pin {
   position: absolute;
+  z-index: 1;
 }
 #map-section > .container > .map > .pins > .pin > svg {
   position: absolute;
@@ -250,6 +256,7 @@
   border-radius: 4px;
   padding: 8px 10px;
   position: relative;
+  z-index: 1;
   filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06));
 }
 @media (max-width: 767px) {
@@ -371,6 +378,7 @@
 }
 #map-section > .container > .map > .influencers > .influencer .polaroid {
   transform-origin: center center;
+  z-index: 1;
 }
 @-webkit-keyframes pulse {
   0% {

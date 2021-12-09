@@ -1,7 +1,11 @@
 <div id="map-section">
   <div class="container" style="display: none">
     <div class="map">
-      <img class="background" src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/map.png" alt="World map" />
+      <img
+        class="background"
+        src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/map.png"
+        alt="World map"
+      />
       <div class="influencers">
         <div
           class="influencer"
@@ -26,7 +30,7 @@
               class="image"
               style="
                 transform: rotate(0.1deg);
-                background-image: url(https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-mari.explores.png);
+                background-image: url(https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/polaroid-mari.explores.png);
               "
             ></div>
           </a>
@@ -35,7 +39,7 @@
             <div class="bubble-content">
               <div class="photo">
                 <img
-                  src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-mari.explores.jpg"
+                  src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/dp-mari.explores.jpg"
                   alt="mari.explores's profile photo"
                 />
               </div>
@@ -74,7 +78,7 @@
               class="image"
               style="
                 transform: rotate(0.1deg);
-                background-image: url(https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-haleytakesontheworld.png);
+                background-image: url(https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/polaroid-haleytakesontheworld.png);
               "
             ></div>
           </a>
@@ -86,7 +90,7 @@
             <div class="bubble-content">
               <div class="photo">
                 <img
-                  src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-haleytakesontheworld.jpg"
+                  src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/dp-haleytakesontheworld.jpg"
                   alt="Haley Dasovich's profile photo"
                 />
               </div>
@@ -125,7 +129,7 @@
               class="image"
               style="
                 transform: rotate(0.1deg);
-                background-image: url(https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-carson.moody_.png);
+                background-image: url(https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/polaroid-carson.moody_.png);
               "
             ></div>
           </a>
@@ -134,7 +138,7 @@
             <div class="bubble-content">
               <div class="photo">
                 <img
-                  src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-carson.moody_.jpg"
+                  src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/dp-carson.moody_.jpg"
                   alt="Carson Moody's profile photo"
                 />
               </div>
@@ -180,7 +184,7 @@
               class="image"
               style="
                 transform: rotate(-15deg);
-                background-image: url(https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-thepoortraveler.png);
+                background-image: url(https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/polaroid-thepoortraveler.png);
               "
             ></div>
           </a>
@@ -189,7 +193,7 @@
             <div class="bubble-content">
               <div class="photo">
                 <img
-                  src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-thepoortraveler.jpg"
+                  src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/dp-thepoortraveler.jpg"
                   alt="Vins & Yosh's profile photo"
                 />
               </div>
@@ -240,7 +244,7 @@
               class="image"
               style="
                 transform: rotate(5deg);
-                background-image: url(https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/polaroid-danielcmarsh.png);
+                background-image: url(https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/polaroid-danielcmarsh.png);
               "
             ></div>
           </a>
@@ -249,7 +253,7 @@
             <div class="bubble-content">
               <div class="photo">
                 <img
-                  src="https://pal.wideoutplusdev.com/wp-content/uploads/2021/12/dp-danielcmarsh.jpg"
+                  src="https://foreverflyer.philippineairlines.com/wp-content/uploads/2021/12/dp-danielcmarsh.jpg"
                   alt="Daniel Marsh's profile photo"
                 />
               </div>
@@ -355,12 +359,19 @@
         var $ = function (s) {
           return container.querySelectorAll(s);
         };
+        var inViewport = function () {
+          return (
+            container.querySelector('.map').getBoundingClientRect().top <=
+            (window.innerHeight || document.documentElementClientHeight)
+          );
+        };
         var mainTL = new gsap.timeline();
 
         mainTL
           .set($('.bubble, .polaroid'), { opacity: 0, scale: 0, z: 0.1 }, 0)
           .set($('.arrow.to-right svg'), { clipPath: 'ellipse(0% 100% at 00% 50%)' }, 0)
-          .set($('.arrow.to-left svg'), { clipPath: 'ellipse(0% 100% at 100% 50%)' }, 0);
+          .set($('.arrow.to-left svg'), { clipPath: 'ellipse(0% 100% at 100% 50%)' }, 0)
+          .pause(true);
 
         mainTL
           .to($('.bubble'), { opacity: 1, scale: 1, duration: 0.5, stagger: 0.3, ease: 'power.out1' })
@@ -375,6 +386,11 @@
             '<'
           )
           .to($('.polaroid'), { opacity: 1, scale: 1, duration: 0.5, stagger: 0.3, ease: 'power.out1' }, '<');
+
+        if (inViewport()) mainTL.play();
+        window.addEventListener('scroll', function () {
+          if (mainTL.progress() == 0 && inViewport()) mainTL.play();
+        });
       })();
     });
   </script>
