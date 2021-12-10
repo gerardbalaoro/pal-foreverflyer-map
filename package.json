@@ -1,10 +1,9 @@
 {
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "concurrently \"node scripts/build.js\" \"node scripts/publish.js\"",
     "serve": "node scripts/serve.js",
-    "publish": "node scripts/publish.js",
-    "watch": "nodemon --ext * --watch src --watch build/assets --watch scripts --exec concurrently 'npm:build' 'npm:publish'",
-    "dev": "concurrently 'npm:watch' 'npm:serve'"
+    "watch": "nodemon -x \"npm run build\"",
+    "dev": "concurrently \"npm:serve\" \"npm:watch\""
   },
   "dependencies": {
     "assign-deep": "^1.0.1",
