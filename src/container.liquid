@@ -15,7 +15,9 @@
 				if (container) container.style.display = '';
 				var $ = function (s) { return container.querySelectorAll(s); };
 				var inViewport = function () { 
-					return container.querySelector('.map').getBoundingClientRect().top <= (window.innerHeight || document.documentElementClientHeight) 
+					var rect = container.querySelector('.map').getBoundingClientRect();
+					var screen = (window.innerHeight || document.documentElementClientHeight);
+					return rect.top + rect.height / 2 <= screen;
 				};
 				var mainTL = new gsap.timeline();
 
@@ -26,7 +28,7 @@
 					.pause(true);
 				
 				mainTL
-					.to($('.bubble'), { opacity: 1, scale: 1, duration: 0.5, stagger: 0.3, ease: 'power.out1' })
+					.to($('.bubble'), { opacity: 1, scale: 1, duration: 0.5, delay: 1, stagger: 0.3, ease: 'power.out1' })
 					.to($('.arrow.to-right svg'), { clipPath: 'ellipse(200% 100% at 00% 50%)', duration: 1, delay: 0.5, stagger: 0.3, ease: 'power.out1' }, '<')
 					.to($('.arrow.to-left svg'), { clipPath: 'ellipse(200% 100% at 100% 50%)', duration: 1, delay: 0.5, stagger: 0.3, ease: 'power.out1' }, '<')
 					.to($('.polaroid'), { opacity: 1, scale: 1, duration: 0.5, stagger: 0.3, ease: 'power.out1' }, '<');
