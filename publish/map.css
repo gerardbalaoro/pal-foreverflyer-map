@@ -350,6 +350,7 @@
   }
 }
 #map-section > .container > .map > .influencers > .influencer > .bubble .bubble-footer .itinerary {
+  font-family: 'Brandon', sans-serif !important;
   text-decoration: none;
   background-color: var(--color, #0f346a);
   border-radius: 5px;
